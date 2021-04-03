@@ -17,5 +17,10 @@ number_of_payments = length_of_mortgage * 12
 
 def monthly_mortgage_payment(principal, interest_rate, number_of_payments):
     single_payment = principal * interest_rate *(1 + interest_rate)**number_of_payments / (1 + interest_rate)**number_of_payments -1
-    print(single_payment)
-monthly_mortgage_payment(principal,interest_rate,number_of_payments)
+    total_amaount_paid = (single_payment * number_of_payments)
+    total_interest_paid = (total_amaount_paid - principal)
+    print("The total monthly payment is £"+str(single_payment))
+    print("The total amount paid over the course of the whole mortgage is £"+str(total_amaount_paid))
+    print("The total interest paid is £"+str(total_interest_paid))
+
+monthly_mortgage_payment(principal, interest_rate, number_of_payments)
